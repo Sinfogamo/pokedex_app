@@ -27,5 +27,4 @@ flutter:
 
   assets:
     - assets/
-    - assets/types/
     - assets/tags/
