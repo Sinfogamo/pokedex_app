@@ -34,6 +34,7 @@ class _PokemonPageState extends State<PokemonPage> {
           appBar: AppBar(
             title: Text("Pokémon"),
             centerTitle: true,
+            backgroundColor: Colors.redAccent,
           ),
           body: FutureBuilder(
             future: pokemonList,

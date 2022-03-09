@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Pokémon"),
         centerTitle: true,
+        backgroundColor: Colors.redAccent,
       ),
       body: SingleChildScrollView(
         controller: _scrollController,

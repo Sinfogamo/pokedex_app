@@ -25,7 +25,9 @@ Widget statsWidget(Future<Pokemon> info) {
                         animation: true,
                         lineHeight: 20.0,
                         animationDuration: 2500,
-                        percent: stats[index].baseStat / 100,
+                        percent: stats[index].baseStat / 100 > 1.0
+                            ? 1.0
+                            : stats[index].baseStat / 100,
                         linearStrokeCap: LinearStrokeCap.roundAll,
                         progressColor: colors[colorList(type[0].type.name)],
                       ),

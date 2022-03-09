@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:pokedex_app_tri/models/pokemon_model.dart';
 import 'package:pokedex_app_tri/service/pokemon_service.dart';
 import 'package:pokedex_app_tri/theme/colors.dart';
@@ -84,10 +83,13 @@ class _DetailsPokemonState extends State<DetailsPokemon> {
                 ),
               ),
             ),
-            Container(
-              child: Text(
-                name.toUpperCase(),
-                style: TextStyle(fontSize: 30),
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Container(
+                child: Text(
+                  name.toUpperCase(),
+                  style: TextStyle(fontSize: 30),
+                ),
               ),
             ),
             FutureBuilder(
@@ -102,9 +104,6 @@ class _DetailsPokemonState extends State<DetailsPokemon> {
                   return Container();
                 }
               },
-            ),
-            SizedBox(
-              height: 70.0,
             ),
             Expanded(child: statsWidget(info)),
           ],
